@@ -415,7 +415,6 @@ portasmRESTORE_ADDITIONAL_REGISTERS
 #endif /* ifdef portasmSTORE_VPU_CONTEXT */
 
 #if( configENABLE_FPU == 1 )
-    csrr t0, mstatus
     srl t1, t0, MSTATUS_FS_OFFSET
     andi t1, t1, 3
     addi t2, x0, 3
